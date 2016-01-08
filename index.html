@@ -43,6 +43,10 @@ FB.getLoginStatus(function(response) {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+location / {
+    error_page 405 =200 $uri;
+    root /var/www/html/yoursite.com;
+}
 </body>
 <h1>Test</h1>
 </html>
